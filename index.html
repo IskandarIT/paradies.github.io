@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PARADIES</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+    <div id="logo" onclick="slowScroll('#top')">
+        <span>Paradies</span>
+    </div>
+    <div id="about">
+        <a href="#" title="Возможности" onclick="slowScroll('#main')">Наши клиенты</a>
+        <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Наши услуги </a>
+        <a href="#" onclick="slowScroll('#contacts')" title="">Заказать</a>
+        <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">Прайс-лист</a>
+    </div>
+</header>
+
+<div id="top">
+    <h1>"Paradies"-предлагает услуги проката компьютеров, ноутбуков и PlayStation </h1>
+    <h3>
+        Наша компания предлагает в аренду компьютеры (+ наушники), ноутбуки, PlayStation (+ телевизоры).
+        Не секрет, что есть компании, которые арендуют PlayStation.
+        И наша особенность в том, что мы единственная компания, которая предлагает в аренду компьютеры и ноутбуки!
+    </h3>
+</div>
+
+<div id="main">
+    <div class="intro">
+        <h2>Наши клиенты</h2>
+        <span>Наши клиенты</span>
+    </div>
+    <div class="text">
+        <span>Дети школьного возраста
+              Студенты в возрасте от 18 до 22 лет
+              Люди среднего возраста от 22 до 41 года
+              Учебные заведения *
+
+            * Это также может представлять интерес
+            для образовательных учреждений.
+            Вместо того, чтобы покупать постоянные компьютеры,
+            вы можете арендовать их и хранить всю информацию на флешках,
+            которые очень удобно брать с собой.</span>
+    </div>
+</div>
+
+<div id="overview">
+    <h2>Наши услуги</h2>
+    <h4>с нами все проще</h4>
+
+    <div class="img">
+        <img src="image/Paradies.PNG" alt="">
+        <span> Мы работаем как организм и поддерживаем друг друга.
+            Наша команда очень креативная, дружелюбная, находчивая и позитивная!</span>
+    </div>
+    <div class="img">
+        <img src=" https://secure.mdg.com/img/sysbig/en-US/XXL/4925_1.JPG" alt="">
+        <img src="https://2.bp.blogspot.com/-mtxXVE6SKPI/V80dunaJ09I/AAAAAAAAG9g/bU5TkE1PwwY8QWrmMpw2md-s8kM4CE9cQCLcB/s1600/pc-or-laptop.jpg" alt="">
+        <span>Наша особенность в том, что мы единственная компания, которая предлагает в аренду компьютеры и ноутбуки!</span>
+    </div>
+</div>
+
+<div id="contacts">
+    <center><h5>Заказать: Компьютер,Playstation 4,Ноутбук </h5></center>
+    <form id="form_input">
+        <label for="name">Имя <span>*</span></label><br>
+        <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+        <label for="email">Ваша почта <span>*</span></label><br>
+        <input type="email" placeholder="Введите email" name="email" id="email"><br>
+        <label for="message">Что вы хотите заказать <span>*</span></label><br>
+        <textarea placeholder="Компьютер,Playstation 4,Ноутбук" name="message" id="message"></textarea><br>
+        <div id="mess_send" class="btn">Закзать</div>
+    </form>
+</div>
+
+<div id="faq">
+    <div>
+        <span class="title">Прайс-лист</span><br>
+        <span class="heading">Компьютер  </span>
+        <p>300 сом</p>
+        <span class="heading">Ноутбук </span>
+        <p>800 сом</p>
+        <span class="heading">PlayStation </span>
+        <p>500 сом</p>
+        <span class="heading">TV </span>
+        <p>500 сом</p>
+        <span class="heading">Интернет</span>
+        <p>200 сом</p>
+
+    </div>
+    <div>
+        <span class="title">Контакты</span><br>
+        <span class="heading">Справочная служба</span>
+        <p>+996(553)-98-03-99</p>
+        <span class="heading">Instagram</span>
+        <p>Paradies_KG</p>
+        <span class="heading">Gmail</span>
+        <p>Paradies_KG@gmail.com</p>
+    </div>
+    <div>
+        <span class="title">Адресс</span><br>
+        <span class="heading">Микро район</span>
+        <p>ул. Ахунбаева 70/85</p>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    function slowScroll(id) {
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
+        }, 500);
+    }
+
+    $(document).on("scroll", function () {
+        if($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+        else
+            $("header").attr("class", "fixed");
+    });
+</script>
+</body>
+</html>
